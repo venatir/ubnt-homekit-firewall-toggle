@@ -1,0 +1,12 @@
+{
+  "name": "homekit-router",
+  "packageManager": "yarn@4.3.1",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "hap-nodejs": "^1.1.0",
+    "node-unifi": "^2.5.1",
+    "qrcode-terminal": "^0.12.0"
+  }
+}
