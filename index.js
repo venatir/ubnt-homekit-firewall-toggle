@@ -12,6 +12,7 @@ let unifi_device_hostname = process.env.UNIFI_DEVICE_HOSTNAME;
 let unifi_device_mac = process.env.UNIFI_DEVICE_MAC;
 const unifi_rule_name_template = process.env.UNIFI_RULE_NAME_TEMPLATE || "HomeKit rule for <DEVICE_HOSTNAME>";
 const unifi_sslverify = false;
+const service_port = process.env.SERVICE_PORT || 8080;
 
 const homekit_service_name_template = process.env.HOMEKIT_SERVICE_NAME_TEMPLATE || "Stop Internet Access for <DEVICE_HOSTNAME>";
 const homekit_pin_code = process.env.HOMEKIT_PIN_CODE || '123-45-678';
@@ -163,7 +164,10 @@ const main = async () => {
         username: unifiHomeKit.unifi_device_mac,
         pincode: homekit_pin_code,
         category: hap.Categories.SWITCH,
+        bind:'',
+        port: service_port,
     });
+    console.log(accessory.setupURI())
     qrcode.generate(accessory.setupURI(), {small: true});
 
 };
