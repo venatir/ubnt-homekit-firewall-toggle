@@ -30,8 +30,8 @@ jobs:
           context: .
           push: true
           tags: |
-            ghcr.io/${{ github.repository_owner }}/my-image:latest
-            ghcr.io/${{ github.repository_owner }}/my-image:${{ github.sha }}
+            ghcr.io/${{ github.repository_owner }}/ubnt-homekit-firewall-toggle:latest
+            ghcr.io/${{ github.repository_owner }}/ubnt-homekit-firewall-toggle:${{ github.sha }}
 
       - name: Image Digest
         run: |
