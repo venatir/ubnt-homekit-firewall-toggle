@@ -20,3 +20,4 @@ This is specifically useful for other non-technical members of the family who fo
   - `HOMEKIT_SERVICE_NAME_TEMPLATE` - optional. Defaults to `Stop Internet Access for <DEVICE_HOSTNAME>`
   - `HOMEKIT_PIN_CODE` - optional. Defaults to `123-45-678`
 2. Run docker: `docker run docker pull ghcr.io/venatir/ubnt-homekit-firewall-toggle:e9520c55b02e23e8dc8a22e8c92982db96b4d20a`
+3. If you look at the output, you'll see a QR code that you can scan with your phone to add it to Apple Home. Alternatively, you can add manually using the `HOMEKIT_PIN_CODE` you set.
