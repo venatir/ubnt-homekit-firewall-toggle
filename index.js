@@ -164,7 +164,6 @@ const main = async () => {
         username: unifiHomeKit.unifi_device_mac,
         pincode: homekit_pin_code,
         category: hap.Categories.SWITCH,
-        bind:'',
         port: service_port,
     });
     console.log(accessory.setupURI())
