@@ -19,5 +19,7 @@ This is specifically useful for other non-technical members of the family who fo
   - `UNIFI_RULE_NAME_TEMPLATE` - optional. Defaults to `HomeKit rule for <DEVICE_HOSTNAME>`
   - `HOMEKIT_SERVICE_NAME_TEMPLATE` - optional. Defaults to `Stop Internet Access for <DEVICE_HOSTNAME>`
   - `HOMEKIT_PIN_CODE` - optional. Defaults to `123-45-678`
+  - `SERVICE_PORT` - optional. Defaults to `8080`
+  - `SERVICE_IP` - optional. Defaults to `0.0.0.0`. Useful when you are running in docker and the virtual accessory is unresponsive. Then you want to bind to a specific IP.
 2. Run docker: `docker run docker pull ghcr.io/venatir/ubnt-homekit-firewall-toggle:latest`. Make sure to set the env vars above and the network should be `host`, not `bridge`, so that mDNS works correctly. Otherwise you'll need mDNS reflectors.
 3. If you look at the output, you'll see a QR code that you can scan with your phone to add it to Apple Home. Alternatively, you can add manually using the `HOMEKIT_PIN_CODE` you set.
